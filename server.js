@@ -12,7 +12,7 @@ function verifyId(req, res, next){
   const project = projects.find(p => p.id == id);
 
   if(!project){
-    res.status(400).send({ error: 'Project not found' })
+    res.status(400).json({ error: 'Project not found' })
   }
 
   return next();
